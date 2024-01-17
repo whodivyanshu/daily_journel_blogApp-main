@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px 50px;
+    border: 1px ;
+    padding: 20px 150px;
+    background-color: rgb(199, 205, 211);
+    border-radius: 10px;
+}
+.navbar h1{
+    font-size: large;
+    font-weight: 600;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn{
+    padding: 10px 15px;
+    background-color: rgb(109, 111, 112);
+    color: white;
+    border-radius: 5px;
+}
+.footer{
+    max-width: 100%;
+    text-align: center;
+    margin: 50px 30px 5px 30px;
+    border: 1px ;
+    padding: 15px 0;
+    background-color: rgb(199, 205, 211);
+    border-radius: 10px;
+}
+.categoryList{
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    background-color: rgb(48, 52, 53);
+    color: white;
+    border-radius: 3px;
+    margin: 5px;
+}
+.blogpost{
+    margin-top:30px;
+    margin-left:auto
+}
+.blogpost h1{
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.blogpost img{
+    border-radius: 10px;
+    height: 50vh;
+    width: 50vw;
+}
+h2{
+    @apply text-2xl font-bold my-4;
+}
+.primary-btn{
+    @apply px-4 py-2 bg-slate-800 text-white rounded-md
+}
+
+input,textarea{
+    @apply px-4 py-2 border border-slate-300 rounded-md
+}
+textarea{
+    @apply h-36
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+}
