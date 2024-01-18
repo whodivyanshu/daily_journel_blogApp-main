@@ -1,20 +1,18 @@
 import CreatePostForm from '@/components/CreatePostForm'
+import { authOptions } from '@/lib/auth'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '../api/auth/[...nextauth]/route'
 import { redirect } from 'next/navigation'
 
-
-const page = async() => {
-
-    const session=await getServerSession(authOptions);
-    //console.log(session);
-    if(!session){
-        redirect('/signin')
-    }
+const page = async () => {
+  const session = await getServerSession(authOptions)
+  //console.log(session);
+  if (!session) {
+    redirect('/signin')
+  }
 
   return (
     <div>
-        <CreatePostForm/>
+      <CreatePostForm />
     </div>
   )
 }
